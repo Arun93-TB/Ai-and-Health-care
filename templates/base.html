@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}AI Health Assistant{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        <span>AI Health Assistant</span>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/dashboard">Dashboard</a></li>
+
+            <li><a href="/symptoms">Prediction</a></li>
+
+            <li><a href="/history">History</a></li>
+
+            <li><a href="/about">About</a></li>
+
+            <li><a href="/login">Login</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+{% block content %}
+
+{% endblock %}
+
+</main>
+
+<footer>
+
+    <div class="footer-container">
+
+        <h3>AI Health Assistant</h3>
+
+        <p>
+
+            AI-powered Early Disease Risk Prediction and Personalized Health Recommendations.
+
+        </p>
+
+        <div class="footer-icons">
+
+            <i class="fab fa-github"></i>
+
+            <i class="fab fa-linkedin"></i>
+
+            <i class="fab fa-google"></i>
+
+        </div>
+
+        <p>
+
+            © 2026 AI Health Assistant | All Rights Reserved
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

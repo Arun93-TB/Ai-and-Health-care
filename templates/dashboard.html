@@ -1,0 +1,271 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard | AI Health Assistant
+{% endblock %}
+
+{% block content %}
+
+<section class="dashboard">
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <h1>
+                <i class="fa-solid fa-heart-pulse"></i>
+                Welcome,
+                {{ username if username else "User" }}
+            </h1>
+
+            <p>
+                Monitor your health and receive AI-powered disease predictions.
+            </p>
+
+        </div>
+
+        <a href="/symptoms" class="btn-primary">
+
+            <i class="fa-solid fa-stethoscope"></i>
+
+            New Prediction
+
+        </a>
+
+    </div>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-notes-medical"></i>
+
+            <h2>24</h2>
+
+            <p>Total Predictions</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h2>Healthy</h2>
+
+            <p>Current Status</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h2>92%</h2>
+
+            <p>Health Score</p>
+
+        </div>
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <h2>Low</h2>
+
+            <p>Risk Level</p>
+
+        </div>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-box">
+
+            <h2>
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Recent Prediction
+
+            </h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Disease</th>
+
+                    <td>Diabetes</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Confidence</th>
+
+                    <td>91%</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Risk</th>
+
+                    <td style="color:green;">Low</td>
+
+                </tr>
+
+                <tr>
+
+                    <th>Date</th>
+
+                    <td>24 July 2026</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="dashboard-box">
+
+            <h2>
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                Health Recommendations
+
+            </h2>
+
+            <ul>
+
+                <li>✔ Drink at least 2–3 litres of water daily.</li>
+
+                <li>✔ Exercise for 30 minutes every day.</li>
+
+                <li>✔ Eat fruits and vegetables.</li>
+
+                <li>✔ Sleep 7–8 hours every night.</li>
+
+                <li>✔ Avoid smoking and excessive alcohol.</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-box">
+
+            <h2>
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                Disease Statistics
+
+            </h2>
+
+            <canvas id="predictionChart"></canvas>
+
+        </div>
+
+        <div class="dashboard-box">
+
+            <h2>
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Quick Actions
+
+            </h2>
+
+            <div class="quick-buttons">
+
+                <a href="/symptoms" class="action-btn">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                    Predict Disease
+
+                </a>
+
+                <a href="/history" class="action-btn">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    Prediction History
+
+                </a>
+
+                <a href="/about" class="action-btn">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    About Project
+
+                </a>
+
+                <a href="/logout" class="action-btn logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+const ctx=document.getElementById("predictionChart");
+
+new Chart(ctx,{
+
+type:"bar",
+
+data:{
+
+labels:["Diabetes","Heart","Asthma","Flu","Hypertension"],
+
+datasets:[{
+
+label:"Predictions",
+
+data:[18,10,7,12,9]
+
+}]
+
+},
+
+options:{
+
+responsive:true,
+
+plugins:{
+
+legend:{
+
+display:false
+
+}
+
+}
+
+}
+
+});
+
+</script>
+
+{% endblock %}

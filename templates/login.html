@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login | AI Health Assistant
+{% endblock %}
+
+{% block content %}
+
+<section class="login-section">
+
+    <div class="login-container">
+
+        <div class="login-left">
+
+            <h1>Welcome Back!</h1>
+
+            <p>
+
+                Sign in to access your AI-powered health dashboard,
+                view prediction history, and receive personalized
+                health recommendations.
+
+            </p>
+
+            <img src="{{ url_for('static', filename='images/login.png') }}"
+                 alt="Login">
+
+        </div>
+
+        <div class="login-right">
+
+            <div class="login-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                    Login
+
+                </h2>
+
+                <form action="/login" method="POST">
+
+                    <div class="input-box">
+
+                        <label>Email Address</label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Enter Email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Password</label>
+
+                        <div class="input-field">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="Enter Password"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="remember">
+
+                        <label>
+
+                            <input type="checkbox">
+
+                            Remember Me
+
+                        </label>
+
+                        <a href="#">
+
+                            Forgot Password?
+
+                        </a>
+
+                    </div>
+
+                    <button type="submit" class="login-btn">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <div class="divider">
+
+                    <span>OR</span>
+
+                </div>
+
+                <div class="social-login">
+
+                    <button>
+
+                        <i class="fab fa-google"></i>
+
+                        Google
+
+                    </button>
+
+                    <button>
+
+                        <i class="fab fa-github"></i>
+
+                        GitHub
+
+                    </button>
+
+                </div>
+
+                <p class="register-link">
+
+                    Don't have an account?
+
+                    <a href="/register">
+
+                        Register Here
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
