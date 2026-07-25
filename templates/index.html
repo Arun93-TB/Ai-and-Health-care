@@ -1,0 +1,335 @@
+{% extends "base.html" %}
+
+{% block title %}
+AI Health Assistant
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="badge">
+            <i class="fa-solid fa-heart-pulse"></i>
+            AI Powered Healthcare
+        </span>
+
+        <h1>
+            AI Health Assistant
+        </h1>
+
+        <h2>
+            Early Disease Risk Prediction &
+            Personalized Health Recommendations
+        </h2>
+
+        <p>
+
+            Many people ignore early symptoms because they lack quick
+            medical guidance. Our AI Health Assistant analyzes your
+            symptoms, predicts possible diseases, provides confidence
+            scores, healthy lifestyle recommendations, and encourages
+            timely medical consultation.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="/register" class="btn-primary">
+
+                Get Started
+
+            </a>
+
+            <a href="/about" class="btn-secondary">
+
+                Learn More
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <img src="{{ url_for('static', filename='images/doctor.png') }}" alt="Doctor">
+
+    </div>
+
+</section>
+
+<section class="features">
+
+    <h2>
+
+        Our Features
+
+    </h2>
+
+    <div class="feature-container">
+
+        <div class="card">
+
+            <i class="fa-solid fa-stethoscope"></i>
+
+            <h3>
+
+                Disease Prediction
+
+            </h3>
+
+            <p>
+
+                Predict possible diseases using AI and Machine Learning.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+
+                Confidence Score
+
+            </h3>
+
+            <p>
+
+                View the prediction probability and disease risk level.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>
+
+                Health Tips
+
+            </h3>
+
+            <p>
+
+                Get personalized health recommendations based on symptoms.
+
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-hospital"></i>
+
+            <h3>
+
+                Nearby Hospitals
+
+            </h3>
+
+            <p>
+
+                Find nearby hospitals for immediate medical assistance.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="steps">
+
+    <h2>
+
+        How It Works
+
+    </h2>
+
+    <div class="step-container">
+
+        <div class="step">
+
+            <span>1</span>
+
+            <h3>
+
+                Register
+
+            </h3>
+
+            <p>
+
+                Create your account securely.
+
+            </p>
+
+        </div>
+
+        <div class="step">
+
+            <span>2</span>
+
+            <h3>
+
+                Enter Symptoms
+
+            </h3>
+
+            <p>
+
+                Fill your health details and symptoms.
+
+            </p>
+
+        </div>
+
+        <div class="step">
+
+            <span>3</span>
+
+            <h3>
+
+                AI Prediction
+
+            </h3>
+
+            <p>
+
+                Machine Learning predicts possible diseases.
+
+            </p>
+
+        </div>
+
+        <div class="step">
+
+            <span>4</span>
+
+            <h3>
+
+                Health Recommendation
+
+            </h3>
+
+            <p>
+
+                Receive personalized health advice and preventive measures.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="statistics">
+
+    <h2>
+
+        AI Healthcare Statistics
+
+    </h2>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+
+            <h3>
+
+                95%
+
+            </h3>
+
+            <p>
+
+                Prediction Accuracy
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>
+
+                24/7
+
+            </h3>
+
+            <p>
+
+                AI Assistance
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>
+
+                100+
+
+            </h3>
+
+            <p>
+
+                Disease Symptoms
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>
+
+                1000+
+
+            </h3>
+
+            <p>
+
+                Happy Users
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <h2>
+
+        Ready to Check Your Health?
+
+    </h2>
+
+    <p>
+
+        Take the first step toward better healthcare with AI-powered disease prediction.
+
+    </p>
+
+    <a href="/register" class="btn-primary">
+
+        Start Now
+
+    </a>
+
+</section>
+
+{% endblock %}
